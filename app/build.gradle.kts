@@ -52,6 +52,7 @@ android {
             "-opt-in=kotlinx.coroutines.FlowPreview",
         ))
     }
+    }
 
     buildFeatures {
         compose = true
