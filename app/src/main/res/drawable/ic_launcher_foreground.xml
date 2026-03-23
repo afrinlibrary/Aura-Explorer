@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer glow ring -->
+    <path
+        android:fillColor="#26FFCC80"
+        android:pathData="M54,18 A36,36 0 1,1 53.99,18 Z"/>
+
+    <!-- Folder base shape -->
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M30,48 L30,74 Q30,78 34,78 L74,78 Q78,78 78,74 L78,48 Q78,44 74,44 L56,44 L52,38 Q50,36 47,36 L34,36 Q30,36 30,40 Z"/>
+
+    <!-- Folder tab -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M34,36 L47,36 L52,44 L34,44 Z"/>
+
+    <!-- Pixel grid overlay — 3 rows of 3 blocks -->
+    <path
+        android:fillColor="#1A1110"
+        android:fillAlpha="0.55"
+        android:pathData="
+M38,52 L44,52 L44,58 L38,58 Z
+M46,52 L52,52 L52,58 L46,58 Z
+M54,52 L60,52 L60,58 L54,58 Z
+M38,60 L44,60 L44,66 L38,66 Z
+M46,60 L52,60 L52,66 L46,66 Z
+M54,60 L60,60 L60,66 L54,66 Z
+M38,68 L44,68 L44,70 L38,70 Z
+M46,68 L60,68 L60,70 L46,70 Z"/>
+
+</vector>
