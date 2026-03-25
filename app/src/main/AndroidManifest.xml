@@ -2,20 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Storage permissions -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="29" />
-    <!-- All-files access for Android 11+ (shows in system settings) -->
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
-    <!-- Needed to read media on Android 13+ -->
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
+
+    <queries>
+        <intent>
+            <action android:name="android.settings.MANAGE_APP_ALL_FILES_ACCESS_PERMISSION" />
+        </intent>
+    </queries>
 
     <application
         android:name=".AuraApp"
@@ -28,8 +30,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AuraExplorer"
         android:requestLegacyExternalStorage="true"
-        tools:targetApi="34"
-        xmlns:tools="http://schemas.android.com/tools">
+        tools:targetApi="34">
 
         <activity
             android:name=".MainActivity"
@@ -41,13 +42,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Required for MANAGE_EXTERNAL_STORAGE intent -->
-        <queries>
-            <intent>
-                <action android:name="android.settings.MANAGE_APP_ALL_FILES_ACCESS_PERMISSION" />
-            </intent>
-        </queries>
 
     </application>
 
